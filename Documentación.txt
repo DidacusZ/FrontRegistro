@@ -1,0 +1,27 @@
+Para el cliente:
+
+1.Asegurate de tener la version de apache nº 10.1 en tu IDE
+2.Importa VistaBibliotecaLosRapidos.war en tu IDE
+Anotación: Si abres el proyecto en vez de importar el .war te dará un fallo
+3.Ejecuta el proyecto en tu servidor local
+
+
+Para el equipo:
+(java and web developers)
+1. Importar el .war
+1.1 Al importarlo crea un proyecto en tu Workspace
+2. Actualizar el proyecto
+2.1 Exportar el nuevo .war (con la misma versión de tomcat v.10.1)
+3. Subir a git:
+3.1 El nuevo .war
+3.2 La documentación actualizada
+3.3 Borrar anterior proyecto y pegar el proyecto actualizado de tu Workspace 
+4. Si quieres volver a importarlo asegurate de borrar el anterior,
+sino te pedira que cambies el nombre
+
+Anotación: Tambien se sube el proyecto por si hay algún problema y para poder verlo desde git
+
+IMPORTANTE:
+Tener siempre una copia de todo lo descargado de git antes de hacer el push.
+Por si acaso.
+
