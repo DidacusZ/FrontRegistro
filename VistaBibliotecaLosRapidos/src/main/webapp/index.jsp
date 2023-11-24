@@ -15,14 +15,14 @@
 		<div class="menu">
 		<div class="logo"><a>Biblioteca</a></div>
 			<ul class="nav-links">
-				<li><a onclick="cargarContenido('login.jsp')" href="#" >Login</a></li>				
+								
 			</ul>
 		</div>
 	</nav>
 	
 	<div id="caja">
 	<script>
-        cargarContenido('login.jsp');
+        cargarContenido('registro.jsp');
     </script>
 	</div>  
     

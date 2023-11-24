@@ -18,7 +18,7 @@
 		<input type="password" id="contraseña" class="input" placeholder="Contraseña" required oninput="revisarContraseña()"> 
 		<input type="password" id="confContraseña" class="input" placeholder="Confirmar Contraseña" required oninput="revisarContraseña()">
 		<button type="submit" onclick="guardarUsuario()" class="form-btn">Registrarse</button>
-		<div id="mensajeContraseña"></div>       
+		<div id="mensajeContraseña"></div>   
 	</form>	    
 </div>
 
