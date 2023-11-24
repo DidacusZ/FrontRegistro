@@ -1,6 +1,7 @@
 
-function cargarContenido(url) {
-	console.log("funciona");	
+function cargarContenido(url) {	
+
+	
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -35,11 +36,48 @@ function revisarContraseña() {
     if (contraseña === confContraseña) {
       mensajeContraseña.textContent = 'Las contraseñas coinciden.';
       mensajeContraseña.style.color = 'green';
+      document.getElementById("btnRegistro").disabled = false;//habilita el boton
     } else {
       mensajeContraseña.textContent = 'Las contraseñas no coinciden.';
       mensajeContraseña.style.color = 'red';
+      document.getElementById("btnRegistro").disabled = true;//deshabilita el boton
     }
   }
+  
+  
+function revisarDni(){
+	var dni = document.getElementById('dni').value;
+	var mensajeDni = document.getElementById('mensajeDni');
+	
+	var apiUrl = "http://192.168.30.154:8080/usuarios/dni/"+dni;
+	
+	// Realizar la solicitud GET utilizando fetch
+fetch(apiUrl)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la solicitud.');
+        }
+        return response.json(); // o response.text() si la respuesta es texto en lugar de JSON
+    })
+    .then(data => {
+        // Manipular los datos obtenidos
+        console.log(data);//true --> existe      false --> no existe
+        
+        if (data) {//true
+	      mensajeDni.textContent = 'El DNI ya existe.';
+	      mensajeDni.style.color = 'red';
+	    } else {//false
+	      mensajeDni.textContent = '';
+	      mensajeDni.style.color = '';
+	    }
+        
+        
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+}
 
   
   function guardarUsuario() {
@@ -84,3 +122,5 @@ function revisarContraseña() {
                 console.error('Error:', error);
             });
         }
+           
+        
